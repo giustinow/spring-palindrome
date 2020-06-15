@@ -30,18 +30,12 @@ public class ControllerProva {
 				reverse = "";
 			}
 		contatore = contatore + 1;
-		for (String string : parolePalindrome) {
-			System.out.println("Parole Palindrome: " + string);
-		}
-		System.out.println("Numero parole palindrome: " + contaPalindrome);
-		System.out.println("Numero parole: " + contatore);
 		ModelAndView view = new ModelAndView("risultato");
 		view.addObject("contatore", contatore);
 		view.addObject("contaPalindrome", contaPalindrome);
 		view.addObject("parolePalindrome", parolePalindrome);
 		return view;
 	}
-
 	private int contaParole(String testo) {
 		int contatore = 0;
 			for (int i = 0; i < testo.length(); i++) {
